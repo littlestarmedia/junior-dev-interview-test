@@ -4,6 +4,5 @@ export interface User {
     phone: string | null;
 }
 
-export const findActiveUsersWithPhoneNumbers = (users: User[]): User[] => {
-    // Write your answer here
-};
+export const findActiveUsersWithPhoneNumbers = (users: User[]): string[] =>
+    users.filter(user => user.isActive && user.phone).map(user => `${user.name} (${user.phone})`);

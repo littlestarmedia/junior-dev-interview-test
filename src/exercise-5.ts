@@ -1,3 +1,2 @@
-export const isAnagram = (str1: string, str2: string): boolean => {
-    // Write your answer here
-};
+export const isAnagram = (str1: string, str2: string): boolean =>
+    str1.split('').sort().join('') === str2.split('').sort().join('');
